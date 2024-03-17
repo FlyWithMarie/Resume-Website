@@ -1,136 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
-:root{
-    --mainTextColor:#000;
-    --secondaryTextColor:(51 51 51);
-    --mainLinkColor:#0da2b8;
-    --mainBorderColor:rgb(218, 218, 218);
-    --mainBgColor:rgb(249, 250,251);
-}
-*{
-    font-family: 'Readex Pro';
-    line-height: 1.5em;
-    box-sizing: border-box;
-    color: var(--mainTextColor);
+:root {
+	--mainTextColor-light: #000;
+	--secondaryTextColor-light: rgb(51 51 51);
+	--mainLinkColor-light: #0da2b8;
+	--mainBorderColor-light: rgb(218, 218, 218);
+	--mainBgColor-light: rgb(249, 250, 251);
 
-}
-body{
-    background-color: var(--mainBgColor);            
-}
+	--mainTextColor-dark: #fff;
+	--secondaryTextColor-dark: #adb0b1;
+	--mainLinkColor-dark: rgb(30, 190, 214);
+	--mainBorderColor-dark: #2b3031;
+	--mainBgColor-dark: #131415;
 
-p, span, li{
-    color: var(--secondaryTextColor);
-    font-size: 1em;
+	--mainTextColor: var(--mainTextColor-dark);
+	--secondaryTextColor: var(--secondaryTextColor-dark);
+	--mainLinkColor: var(--mainLinkColor-dark);
+	--mainBorderColor: var(--mainBorderColor-dark);
+	--mainBgColor: var(--mainBgColor-dark);
 }
-
-a{
-    text-decoration: none;
-    color: var(--mainLinkColor);
-    font-weight: 500;
+* {
+	font-family: "Readex Pro";
+	line-height: 1.5em;
+	box-sizing: border-box;
+	color: var(--mainTextColor);
 }
-
-li{
-    line-height: 1.9em;
+body {
+	background-color: var(--mainBgColor);
 }
 
-#container--main{
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 1em;
+p,
+span,
+li {
+	color: var(--secondaryTextColor);
+	font-size: 1em;
 }
 
-.section--page{
-    padding-top: 1em;
-    padding-bottom: 1em;
+a {
+	text-decoration: none;
+	color: var(--mainLinkColor);
+	font-weight: 500;
 }
 
-#wrapper--hero{
-    display: flex;
-    align-items: start;
-    gap: 4em;
+li {
+	line-height: 1.9em;
 }
 
-#bio, a{
-    font-weight: 300;
+#container--main {
+	max-width: 700px;
+	margin: 50px auto;
+	padding: 1em;
 }
 
-#user-name{
-    font-size: 3em;
-    margin-top: 0;
+#wrapper--hero {
+	display: flex;
+	align-items: start;
+	gap: 4em;
 }
 
-#profile-pic{
-    width: 210px;
-    height: 210px;
-    margin-top: 20px;
-    object-fit: cover;
+#bio,
+a {
+	font-weight: 300;
 }
 
-#email{
-    color: var(--mainTextColor);
+#user-name {
+	font-size: 3em;
+	margin-top: 0;
 }
 
-#socials--list{
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 1em;
-    flex-wrap: wrap;
+#profile-pic {
+	width: 210px;
+	height: 210px;
+	object-fit: cover;
+	margin-top: 20px;
+	border-radius: 50%;
 }
 
-#socials--list a{
-    font-weight: 300;
-    color: var(--secondaryTextColor);
-    font-size: 0.9em;
-    transition: 0.3s;
+#email {
+	color: var(--mainTextColor);
 }
 
-#socials--list a:hover{
-    font-weight: 100;
-    color: var(--mainLinkColor);
-    font-size: 0.9em;
+#socials--list {
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 1em;
+	flex-wrap: wrap;
 }
 
-#qualifications--list{
-    list-style: none;
-    padding-left: 0;
-
+#socials--list a {
+	font-weight: 300;
+	color: var(--secondaryTextColor);
+	font-size: 0.9em;
+	transition: 0.3s;
 }
 
-#skills--list{
-list-style: none;
-padding-left: 0;
-
-}
-.line-break{
-    background-color: var(--mainBorderColor);
-    height: 2px;
+#socials--list a:hover {
+	font-weight: 100;
+	color: var(--mainLinkColor);
+	font-size: 0.9em;
 }
 
+.work-history-title {
+    background: var(--mainTextColor);
+    color: var(--mainBgColor);
+    padding: 2px 5px;
+    font-size: 18px;
+    margin-top: 40px;
+}
 
-@media(max-width:600px){
+#skills--list,
+#languages--list,
+#qualifications--list {
+	list-style: none;
+	padding-left: 0;
+}
 
-    .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
+.line-break,
+.line-break-bottom {
+	background-color: var(--mainBorderColor);
+	height: 2px;
+}
 
-    #wrapper--hero{
-        display: flex;
-        align-items: start;
-        gap: 1em;
-    }
+.line-break-bottom {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
-    #profile-pic{
-        width: 200px;
-        height: 200px;
-    }
+@media (max-width: 600px) {
+	#wrapper--hero {
+		display: flex;
+		align-items: start;
+		gap: 1em;
+	}
 
-    #wrapper--hero{
-        flex-direction: column;
-    }
+	#profile-pic {
+		width: 200px;
+		height: 200px;
+	}
 
-    .card--work-history{
-        border-left: none;
-        padding-left: 0;
-    }
+	#wrapper--hero {
+		flex-direction: column;
+	}
+
+	.card--work-history {
+		border-left: none;
+		padding-left: 0;
+	}
 }
